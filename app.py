@@ -35,7 +35,7 @@ for item in root.findall('ns:SHOPITEM', ns):
     product_groups[item_group_id]['stocks'].append(stock)
 
 # Generate the HTML output
-html_output = "<html><head><title>Product Stock Report</title></head><body>"
+html_output = "<html><head><title>Chung-shi sklady</title></head><body>"
 
 # Loop through each product group to create an HTML table
 for item_group_id, details in product_groups.items():
