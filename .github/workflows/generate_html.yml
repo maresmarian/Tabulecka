@@ -1,0 +1,35 @@
+name: Generate Product Stock HTML
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script to generate HTML report
+        run: |
+          python your_script_name.py
+          # Replace `your_script_name.py` with the actual script name
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add product_stock_report.html
+          git commit -m "Update product stock report"
+          git push
