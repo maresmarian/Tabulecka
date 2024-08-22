@@ -59,7 +59,7 @@ for item_group_id, details in product_groups.items():
 html_output += "</body></html>"
 
 # Save the HTML to a file
-with open("product_stock_report.html", "w") as file:
+with open("index", "w") as file:
     file.write(html_output)
 
 print("HTML report generated successfully.")
