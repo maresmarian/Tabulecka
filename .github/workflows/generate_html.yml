@@ -29,6 +29,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add index.html
+          git add -A  # This will add all changes, including untracked files
           git commit -m "Update product stock report"
           git push
