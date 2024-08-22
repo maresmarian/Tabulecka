@@ -3,7 +3,7 @@ name: Generate Product Stock HTML
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   generate-html:
