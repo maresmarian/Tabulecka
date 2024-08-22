@@ -23,8 +23,7 @@ jobs:
 
       - name: Run script to generate HTML report
         run: |
-          python your_script_name.py
-          # Replace `your_script_name.py` with the actual script name
+          python app.py
 
       - name: Commit and push changes
         run: |
